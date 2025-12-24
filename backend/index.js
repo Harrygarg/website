@@ -22,7 +22,7 @@ let app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://website-1-o11z.onrender.com",
     credentials:true
 }))
 
@@ -36,4 +36,5 @@ app.use("/api/admin", adminRouter )
 app.listen(port,()=>{
     connectDb()
     console.log("server started")
+
 })
